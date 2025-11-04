@@ -13,7 +13,6 @@ func (app *application) routes() http.Handler {
 	router.MethodNotAllowedHandler = http.HandlerFunc(app.methodNotAllowedResponse)
 
 	router.Use(app.logRequest)
-	router.Use(app.corsMiddleware)
 
 	router.HandleFunc("/v1/healthcheck", app.healthcheckHandler).Methods(http.MethodGet)
 

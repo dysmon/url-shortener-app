@@ -10,7 +10,6 @@ It accepts HTTP requests to shorten URLs and redirect short codes to their origi
 - Shorten a URL (`POST /shorten`)
 - Redirect short code to original URL (`GET /{shortCode}`)
 - Health check endpoint (`GET /healthcheck`)
-- Logs requests and handles CORS
 - Configurable via environment variables
 
 ---
@@ -34,9 +33,9 @@ It accepts HTTP requests to shorten URLs and redirect short codes to their origi
 
 | Method | Path               | Description                           |
 |--------|--------------------|---------------------------------------|
-| `GET`  | `/healthcheck`     | Returns a simple health check status. |
-| `POST` | `/shorten`         | Accepts a URL, returns short code.    |
-| `GET`  | `/{shortCode}`     | Redirects to original URL.            |
+| `GET`  | `/v1/healthcheck`     | Returns a simple health check status. |
+| `POST` | `/v1/shorten`         | Accepts a URL, returns short code.    |
+| `GET`  | `/v1/{shortCode}`     | Redirects to original URL.            |
 
 ---
 

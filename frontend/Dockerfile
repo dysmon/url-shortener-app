@@ -1,7 +1,5 @@
 FROM node:22-alpine AS build-stage
 WORKDIR /app
-ARG API_URL
-ENV REACT_APP_API_BASE=${API_URL}
 COPY package*.json ./
 RUN npm install
 COPY . .

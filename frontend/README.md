@@ -31,17 +31,6 @@ frontend/
 
 ---
 
-## ⚙️ Configuration
-
-### Environment Variables
-- `REACT_APP_API_BASE` → The base URL of the backend API.  
-  Example:
-  ```bash
-  export REACT_APP_API_BASE=http://localhost:8080
-  ```
-
----
-
 ## 🐳 Docker
 
 ### Build Image
@@ -51,7 +40,7 @@ docker build -t url-shortener-frontend .
 
 ### Run Container
 ```bash
-docker run -p 3000:3000 -e REACT_APP_API_BASE=http://backend:8080 url-shortener-frontend
+docker run -p 80:3000 url-shortener-frontend
 ```
 
 ---
