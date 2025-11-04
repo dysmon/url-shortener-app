@@ -18,8 +18,8 @@ strategy:
     maxSurge: 1
 
 image:
-  name: 
-  tag: 
+  name: diasraibek/url-shortener-backend
+  tag: latest
   pullPolicy: IfNotPresent
 
 probes:

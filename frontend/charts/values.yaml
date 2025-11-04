@@ -1,7 +1,7 @@
 image:
   pullPolicy: IfNotPresent
-  name:
-  tag: 
+  name: diasraibek/url-shortener-frontend
+  tag: latest
 
 replicaCount: 1
 resources:
