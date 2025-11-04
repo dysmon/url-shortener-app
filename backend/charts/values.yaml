@@ -1,0 +1,40 @@
+appReplicas: 1
+
+app:
+  port: 8080
+  env: "production"
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+strategy:
+  rollingUpdate:
+    maxUnavailable: 1
+    maxSurge: 1
+
+image:
+  name: 
+  tag: 
+  pullPolicy: IfNotPresent
+
+probes:
+  liveness:
+    path: "/v1/healthcheck"
+    initialDelaySeconds: 15
+    periodSeconds: 10
+    failureThreshold: 3
+  readiness:
+    path: "/v1/healthcheck"
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    successThreshold: 1
+    failureThreshold: 3
+
+service:
+  type: "ClusterIP"
+  port: 80

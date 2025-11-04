@@ -1,0 +1,23 @@
+image:
+  pullPolicy: IfNotPresent
+  name:
+  tag: 
+
+replicaCount: 1
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "200m"
+    memory: "256Mi"
+
+frontend:
+  port: 80
+  env: production
+  apiUrl: "http://shortener.example.com/v1"
+
+service:
+  type: ClusterIP
+  port: 80
+  nodePort: null
