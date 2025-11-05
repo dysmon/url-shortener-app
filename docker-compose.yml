@@ -5,9 +5,9 @@ services:
     image: diasraibek/url-shortener-backend:latest
     container_name: url-backend
     expose:
-      - "8080"
+      - "8000"
     ports:
-      - "8080:8080"
+      - "8000:8000"
     restart: unless-stopped
 
   frontend:

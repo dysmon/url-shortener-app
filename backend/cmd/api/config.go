@@ -16,13 +16,13 @@ func loadConfigFromEnv() *config {
 
 	portStr := os.Getenv("PORT")
 	if portStr == "" {
-		log.Println("PORT not set, defaulting to 8080")
-		cfg.port = 8080
+		log.Println("PORT not set, defaulting to 8000")
+		cfg.port = 8000
 	} else {
 		port, err := strconv.Atoi(portStr)
 		if err != nil {
-			log.Printf("Invalid PORT value %q, defaulting to 8080\n", portStr)
-			cfg.port = 8080
+			log.Printf("Invalid PORT value %q, defaulting to 8000\n", portStr)
+			cfg.port = 8000
 		} else {
 			cfg.port = port
 		}
